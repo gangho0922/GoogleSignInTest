@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        googleSigninButton.style = GIDSignInButtonStyle.wide
         view.addSubview(googleSigninButton)
         googleSigninButton.translatesAutoresizingMaskIntoConstraints = false
         googleSigninButton.addAction(.init(handler: { [weak self] _ in
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         }), for: .touchUpInside)
         googleSigninButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         googleSigninButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-    } 
+    }
     
     func signInGoogle() {
         
